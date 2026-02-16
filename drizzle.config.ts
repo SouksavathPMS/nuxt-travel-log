@@ -1,6 +1,5 @@
+/* eslint-disable node/no-process-env */
 import { defineConfig } from "drizzle-kit";
-
-import { configEnv } from "./app/lib/env";
 
 export default defineConfig({
   out: "./app/lib/db/migrations",
@@ -8,7 +7,6 @@ export default defineConfig({
   dialect: "turso",
   casing: "snake_case",
   dbCredentials: {
-    url: configEnv.TURSO_DATABASE_URL,
-    authToken: configEnv.TURSO_AUTH_TOKEN,
+    url: process.env.TURSO_DATABASE_URL || "file:local.db",
   },
 });
