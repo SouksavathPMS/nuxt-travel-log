@@ -23,4 +23,9 @@ logs
 .env.*
 !.env.example
 
+<<<<<<< HEAD
 local.**
+=======
+
+local.db*
+>>>>>>> 8b91f48eda23f4fb1af3363acb697bfe83bb993f
