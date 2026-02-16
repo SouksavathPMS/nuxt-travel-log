@@ -1,15 +1,12 @@
-import { drizzle } from "drizzle-orm/tursodatabase/database";
+import { drizzle } from "drizzle-orm/singlestore/driver";
 
-import { configEnv } from "../../lib/env";
+import { configEnv } from "../env";
 import * as schema from "./schema";
 
 export const db = drizzle({
   connection: {
-    url: configEnv.TURSO_DATABASE_URL,
-    authToken: configEnv.TURSO_AUTH_TOKEN,
+    path: configEnv.TURSO_DATABASE_URL,
   },
   casing: "snake_case",
   schema,
 });
-
-export default db;
