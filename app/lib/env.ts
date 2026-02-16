@@ -7,7 +7,6 @@ dotenv.config();
 
 const EnvSchema = z.object({
   NODE_ENV: z.string().default("development"),
-  DB_FILE_NAME: z.string(),
   TURSO_AUTH_TOKEN: z.string().optional(),
   TURSO_DATABASE_URL: z.string(),
 });
