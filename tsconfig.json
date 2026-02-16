@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "types": ["node"],
+    "strict": true
+  },
   "references": [
     {
       "path": "./.nuxt/tsconfig.app.json"
