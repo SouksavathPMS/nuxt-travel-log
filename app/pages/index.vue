@@ -9,9 +9,7 @@
           Keep track of your travels and adventures. Add location, photos, and notes to
           create digital journal of your journeys.
         </p>
-        <button class="btn btn-accent">
-          Sign in with GitHub <Icon name="tabler:brand-github" size="22" />
-        </button>
+        <AuthButton />
       </div>
     </div>
   </div>

@@ -8,6 +8,20 @@
       "when": 1771234733530,
       "tag": "0000_rapid_turbo",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1771295965182,
+      "tag": "0001_colossal_old_lace",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1771299560468,
+      "tag": "0002_huge_runaways",
+      "breakpoints": true
     }
   ]
 }
