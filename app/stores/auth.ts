@@ -2,7 +2,12 @@ import { createAuthClient } from "better-auth/vue";
 import { defineStore } from "pinia";
 
 const authClient = createAuthClient({
-  baseURL: "https://nuxt-travel-log-seven-rosy.vercel.app",
+  baseURL: typeof window !== "undefined"
+    ? window.location.origin // uses whatever domain the app is on
+    : "https://nuxt-travel-log-seven-rosy.vercel.app",
+  fetchOptions: {
+    credentials: "include",
+  },
 });
 
 export const useAuthStore = defineStore("useAuthStore", () => {

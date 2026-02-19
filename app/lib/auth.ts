@@ -12,12 +12,10 @@ export const auth = betterAuth({
     "http://localhost:3000",
   ],
   advanced: {
-    crossSubDomainCookies: {
-      enabled: true,
-    },
     defaultCookieAttributes: {
       sameSite: "none",
       secure: true,
+      partitioned: true,
     },
   },
   hooks: {
