@@ -6,6 +6,10 @@ import { db } from "./db/index";
 import { configEnv } from "./env";
 
 export const auth = betterAuth({
+  baseURL: configEnv.BETTER_AUTH_URL,
+  trustedOrigins: [
+    "https://nuxt-travel-log-seven-rosy.vercel.app",
+  ],
   hooks: {
     after: createAuthMiddleware(async (ctx) => {
       if (ctx.path === "/get-session") {
