@@ -1,13 +1,13 @@
 import { auth } from "~/lib/auth";
 
 export default defineEventHandler(async (event) => {
-  if (event.path.startsWith("/dashboard")) {
+  if (event.path.startWith("/dashboard")) {
     const session = await auth.api.getSession({
-      headers: event.headers,
+      headers: getHeaders(event),
     });
 
     if (!session) {
-      return await sendRedirect(event, "/", 302);
+      await sendRedirect(event, "/", 302);
     }
   }
 });
