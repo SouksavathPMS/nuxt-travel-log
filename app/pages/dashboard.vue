@@ -23,7 +23,7 @@ function toggleSizebar() {
       <SizebarButton :show-label="isSidebarOpen" label="Sign Out" icon="tabler:logout-2" href="/sign-out" />
     </div>
     <div class="flex-1">
-      <h1>Map goes here</h1>
+      <NuxtPage />
     </div>
   </div>
 </template>
