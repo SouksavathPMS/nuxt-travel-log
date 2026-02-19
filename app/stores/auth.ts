@@ -1,7 +1,9 @@
 import { createAuthClient } from "better-auth/vue";
 import { defineStore } from "pinia";
 
-const authClient = createAuthClient();
+const authClient = createAuthClient({
+  baseURL: "https://nuxt-travel-log-seven-rosy.vercel.app",
+});
 
 export const useAuthStore = defineStore("useAuthStore", () => {
   const session = ref<Awaited<ReturnType<typeof authClient.useSession>> | null>(null);

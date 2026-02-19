@@ -9,6 +9,7 @@ export const auth = betterAuth({
   baseURL: configEnv.BETTER_AUTH_URL,
   trustedOrigins: [
     "https://nuxt-travel-log-seven-rosy.vercel.app",
+    "http://localhost:3000",
   ],
   hooks: {
     after: createAuthMiddleware(async (ctx) => {
